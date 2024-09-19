@@ -2,6 +2,8 @@
 
 # 🎨 Color Palette Generator
 
+![https://colorpal.onrender.com](https://colorpal.onrender.com)
+
 This is a **Color Palette Generator** built with **Node.js** using **Express.js** and **chroma-js**. It generates a beautiful 5-color palette every time, with varying shades of a randomly generated base color. Perfect for UI/UX designers looking for quick color inspiration! 🌈
 
 ## 🚀 Features
@@ -10,7 +12,8 @@ This is a **Color Palette Generator** built with **Node.js** using **Express.js*
 - Each palette is assigned a unique ID, allowing users to retrieve it via the `/palette/:id` route.
 - Built with **Express.js** for server-side logic and **chroma-js** for color manipulation.
 - Simple and elegant UI for displaying the generated palette, with a refresh button to generate new palettes dynamically.
-# Backend 😎
+
+## Backend 😎
 
 ## 🛠️ Technologies Used
 
@@ -23,8 +26,8 @@ This is a **Color Palette Generator** built with **Node.js** using **Express.js*
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/color-palette-generator.git
-cd color-palette-generator
+git clone https://github.com/Marvellye/colorpal
+cd colorpal
 ```
 
 ### 2. Install Dependencies
@@ -69,23 +72,7 @@ http://localhost:3000/palette/C08552-F3E9DC-5E3023-DAB49D
 2. **Unique ID**: Each generated palette has a unique ID made from the hexadecimal values of the colors, which can be used to retrieve the palette later.
 3. **Using Chroma.js**: The power of **chroma-js** ensures that the generated colors are visually appealing, offering a variety of brightness levels.
 
-## 🐛 Issues Encountered
 
-Building this app wasn't without its challenges! Here are some of the problems we encountered and how we solved them:
-
-1. **Dull Color Palettes**: Initially, we were getting dull and boring colors. The issue was due to the way we were generating shades from the base color. We switched to using `hsl.l` (lightness) adjustments for better visual results.
-   
-2. **Color Palette Variants**: At first, we used random colors that were too different from each other. After realizing that we needed variants of the same base color for consistency, we adjusted our approach to generate color scales with different lightness levels.
-
-3. **Invalid Palette IDs**: When trying to retrieve a palette by ID, some IDs were invalid or incorrectly formatted. We fixed this by ensuring a strict format for the IDs and adding error handling for invalid IDs.
-
-4. **Dynamic Palette Update**: Implementing a smooth update of the UI when a new palette was generated was tricky. By using simple JavaScript and handling the loader display correctly, we ensured a seamless experience for users when generating new palettes.
-
-## ✨ Future Improvements
-
-- Add support for saving favorite palettes in a database.
-- Enhance the UI with animations for palette generation.
-- Allow users to download the color palette in various formats like JSON, CSS, or an image.
 
 ## 🖼️ Example Palette
 
@@ -99,9 +86,9 @@ Palette:
 #DAB49D (Neutral)
 ```
 
-# Front-end🎉✨
+## Front-end🎉✨
 
-# 🎨 Colour Palette display 
+## 🎨 Colour Palette display 
 
 This Colour Palette Generator dynamically generates a palette of five colors and displays them in the UI. Users can interact with the palette by clicking the **Generate** button, and the palette ID is used to save and share specific color combinations. Here's how the layout works.
 
@@ -252,13 +239,26 @@ if (paletteId) {
 ```
 This functionality checks if there is a color palette ID in the URL when the page is loaded. If an ID is present, the corresponding palette is loaded. Otherwise, a new palette is generated.
 
-## 🌟 Problems Encountered
-- **Dull Colors**: Initially, the colors generated were too dull for UI/UX purposes. We addressed this by adjusting the brightness scale to ensure vibrant and harmonious colors.
-- **Hex Values Misplacement**: At one point, the hex values were not displaying properly inside the color boxes. This was fixed by ensuring the `span` elements were correctly updated with the hex values.
-- **Palette Sharing**: Creating a robust sharing mechanism for various social media platforms was a bit challenging but ultimately solved using SweetAlert for the UI and share links for each platform.
+## 🐛 Issues Encountered
 
+Building this app wasn't without its challenges! Here are some of the problems I encountered and how I solved them:
 
-```
+1. **Dull Color Palettes**: Initially, I was getting dull and boring colors. The issue was due to the way I was generating shades from the base color. I switched to using `hsl.l` (lightness) adjustments for better visual results.
+   
+2. **Color Palette Variants**: At first, I used random colors that were too different from each other. After realizing that everyone needed variants of the same base color for consistency, I adjusted my approach to generate color scales with different lightness levels.
+
+3. **Invalid Palette IDs**: When trying to retrieve a palette by ID, some IDs were invalid or incorrectly formatted. I fixed this by ensuring a strict format for the IDs and adding error handling for invalid IDs.
+
+4. **Hex Values Misplacement**: At one point, the hex values were not displaying properly inside the color boxes. This was fixed by ensuring the `span` elements were correctly updated with the hex values.
+5. **Palette Sharing**: Creating a robust sharing mechanism for various social media platforms was a bit challenging but ultimately solved using SweetAlert for the UI and share links for each platform.
+
+6. **Dynamic Palette Update**: Implementing a smooth update of the UI when a new palette was generated was tricky. By using simple JavaScript and handling the loader display correctly, I ensured a seamless experience for users when generating new palettes.
+
+## ✨ Future Improvements
+
+- Add support for saving favorite palettes in a database.
+- Enhance the UI with animations for palette generation.
+- Allow users to download the color palette in various formats like JSON, CSS, or an image.
 
 ## 📜 License
 
