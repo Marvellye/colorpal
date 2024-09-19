@@ -2,7 +2,7 @@
 
 # 🎨 Color Palette Generator
 
-![https://colorpal.onrender.com](https://colorpal.onrender.com)
+[https://colorpal.onrender.com](https://colorpal.onrender.com)
 
 This is a **Color Palette Generator** built with **Node.js** using **Express.js** and **chroma-js**. It generates a beautiful 5-color palette every time, with varying shades of a randomly generated base color. Perfect for UI/UX designers looking for quick color inspiration! 🌈
 
