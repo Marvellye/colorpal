@@ -176,11 +176,13 @@
          // On page load, if the URL has an id, fetch the corresponding palette
          async function loadPaletteById(id) {
            try {
+             loader.style.display = 'block';
              const response = await fetch(`/palette/${id}`);
              const data = await response.json();
          
              // Update the boxes with the palette from the id
              updateBoxes(data.palette);
+             loader.style.display = 'none';
            } catch (error) {
              console.error('Error fetching palette by ID:', error);
            }
